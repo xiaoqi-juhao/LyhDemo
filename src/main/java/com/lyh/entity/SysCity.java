@@ -4,34 +4,35 @@ import javax.persistence.Entity;
 import javax.persistence.GeneratedValue;
 import javax.persistence.Id;
 import javax.persistence.Table;
+// 城市表
 @Entity
 @Table(name="sys_city")
 public class SysCity {
 	@Id
 	@GeneratedValue
-    private Integer id;
+    private Integer id;				// ID
 
-    private Integer pid;
+    private Integer pid;			// 父ID
 
-    private String shortname;
+    private String shortname;		// 简称
 
-    private String name;
+    private String name;			// 名称
 
-    private String mergerName;
+    private String mergerName;		// 全称
 
-    private Byte level;
+    private Byte level;				// 级别
 
-    private String pinyin;
+    private String pinyin;			// 拼音
 
-    private String code;
+    private String code;			// 长途区号
 
-    private String zipCode;
+    private String zipCode;			// 邮编
 
-    private String first;
+    private String first;			// 首字母
 
-    private String lng;
+    private String lng;				// 经度
 
-    private String lat;
+    private String lat;				// 维度
 
     public Integer getId() {
         return id;
@@ -128,4 +129,13 @@ public class SysCity {
     public void setLat(String lat) {
         this.lat = lat == null ? null : lat.trim();
     }
+
+	@Override
+	public String toString() {
+		return "SysCity [id=" + id + ", pid=" + pid + ", shortname=" + shortname + ", name=" + name + ", mergerName="
+				+ mergerName + ", level=" + level + ", pinyin=" + pinyin + ", code=" + code + ", zipCode=" + zipCode
+				+ ", first=" + first + ", lng=" + lng + ", lat=" + lat + "]";
+	}
+    
+    
 }

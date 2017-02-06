@@ -28,4 +28,8 @@ public class WebMvcConfigurer extends WebMvcConfigurerAdapter{
 			 
 		 }).addPathPatterns("/**");
 	 }
+	 
+	 public void addThrowsAdvice(RuntimeException  throwable){
+		 
+	 }
 }

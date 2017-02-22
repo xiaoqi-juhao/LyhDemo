@@ -1,7 +1,7 @@
 package com.lyh.controllor;
 
 import org.springframework.stereotype.Controller;
-import org.springframework.web.bind.annotation.PostMapping;
+import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.RequestMapping;
 
 @Controller
@@ -12,7 +12,7 @@ public class IndexController {
 	 * @param page
 	 * @return
 	 */
-	@PostMapping(value="/page")
+	@GetMapping(value="/page")
 	public String getPage(String page){
 		return page;
 	}

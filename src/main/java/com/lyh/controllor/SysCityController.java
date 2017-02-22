@@ -24,12 +24,12 @@ public class SysCityController {
     private SysCityMapper sysCityMapper;
 
     //获取所有的1级数据
-    @GetMapping(value = "/getCitys")
+    @GetMapping(value = "/getCity")
     public List<SysCity> getSysCityAll(){
         return sysCityMapper.findByLevelOne();
     }
     //获取上级ID的内容
-    @GetMapping(value = "/geCity/{pid}")
+    @GetMapping(value = "/getCity/{pid}")
     public List<SysCity> geSysCityPidList(@PathVariable("pid") String id){
         return sysCityMapper.findByPid(id);
     }
